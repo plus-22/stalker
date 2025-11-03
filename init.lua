@@ -9,10 +9,10 @@ mobs:register_mob("stalker:stalker", {
 	attack_type = "dogfight",
 	pathfinding = true,
 	--specific_attack = {"player", "mobs_npc:npc"},
-	reach = 3,
-	damage = 15,
+	reach = 5,
+	damage = 25,
 	hp_min = 100,
-	hp_max = 150,
+	hp_max = 200,
 	armor = 80,
 	collisionbox = {-0.4, -0.5, -0.4, 0.4, 1.8, 0.4},
 	visual = "mesh",
@@ -31,7 +31,7 @@ mobs:register_mob("stalker:stalker", {
 	},
 	walk_velocity = 5,
 	run_velocity = 9,
-	view_range = 55,
+	view_range = 25,
 	floats = 0,
 	knock_back = false,
 	fall_damage = 0,
@@ -39,7 +39,7 @@ mobs:register_mob("stalker:stalker", {
 	fire_damage = 0,
 	stepheight = 1.7,
 	drops = {
-		{name = "default:diamondblock", chance = 1, min = 1, max = 1},
+		{name = "default:diamond", chance = 1, min = 1, max = 7},
 	},
 	water_damage = 0,
 	lava_damage = 0,
@@ -115,9 +115,9 @@ mobs:spawn({
 if minetest.get_modpath("mcl_core") ~= nil then
   mobs:register_spawn("stalker:stalker", --name
     {"mcl_core:stone","mcl_core:dirt"}, --nodes
-    7, --max_light
+    3, --max_light
     0, --min_light
-    20, --chance ( padrão 20 )
+    5, --chance ( padrão 20 )
     1, --active_object_count
     -5 --max_height
     ) 
@@ -128,11 +128,11 @@ end
 if minetest.get_modpath("default") ~= nil then
   mobs:register_spawn("stalker:stalker", --name
     {"default:stone","default:cobble"}, --nodes
-    7, --max_light
+    3, --max_light
     0, --min_light
-    20, --chance ( padrão 20 )
+    5, --chance ( padrão 20 )
     1, --active_object_count
-    -10 --max_height
+    -1000 --max_height
     ) 
   end 
 
