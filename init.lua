@@ -39,7 +39,7 @@ mobs:register_mob("stalker:stalker", {
 	fire_damage = 0,
 	stepheight = 1.7,
 	drops = {
-		{name = "default:diamond", chance = 1, min = 1, max = 7},
+		{name = "default:gold_lump", chance = 1, min = 1, max = 7},
 	},
 	water_damage = 0,
 	lava_damage = 0,
